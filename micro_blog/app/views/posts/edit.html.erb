@@ -3,7 +3,7 @@
 <% if @post.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
- 
+
     <ul>
     <% @post.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -24,7 +24,7 @@
             <%= f.label :tag %>: <br/>
             <%= text_field_tag :tags, @post.tags.map(&:name).join(', ') %> <br/><br/>
             <%= token_tag form_authenticity_token %>
-            <%= f.submit "Update" %>
+            <%= f.submit "Update", class: "btn btn-primary" %>
           <% end %>
 
     </div>
