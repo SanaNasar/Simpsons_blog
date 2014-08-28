@@ -5,10 +5,15 @@ body {
 
 }
 
-  h3 {
+  h2 {
     color: #2C3E50;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 45px;
+  }
+
+  h3 {
+  	color: ##2C3E50;
+  	font-family: lucida;
   }
 
 
