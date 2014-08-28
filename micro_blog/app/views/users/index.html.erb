@@ -1,11 +1,11 @@
-<h3 style="text-align: center;font-style:italic;">Welcome To the SuperGroup MicroBlog!</h3>
-
+<h3 style="text-align: center;font-style:italic;">Welcome To BlogHub!</h3>
+ 
 <div class="container">
   <% @users.each do |user| %>
     <%= form_for user do |f| %>
       <h3 style="margin: -3px;"><%= f.label :name, "#{user.first_name} #{user.last_name}" %></h3>
       <%= f.label :email, "#{user.email}" %></br>
-      <%= link_to "Show User ", user_path(user), method: :get %></br>
+      <%= link_to "Show User ", user_page_path(user,1), method: :get %></br>
 
       <% if user.id == @current_user.id %>
         <%= link_to "Submit a Post", new_user_post_path(@current_user) %> </br>
