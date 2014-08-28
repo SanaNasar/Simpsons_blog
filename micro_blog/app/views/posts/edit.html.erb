@@ -1,0 +1,33 @@
+<!-- edit.html.erb -->
+
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+ 
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-6">
+
+          <%= form_for @post do |f| %>
+            <%= f.label :title %>: <br/>
+            <%= f.text_field :title %> <br/><br/>
+            <%= f.label :description %>: <br/>
+            <%= f.text_area :body %> <br/><br/>
+            <%= f.label :tag %>: <br/>
+            <%= text_field_tag :tags, @post.tags.map(&:name).join(', ') %> <br/><br/>
+            <%= token_tag form_authenticity_token %>
+            <%= f.submit "Update" %>
+          <% end %>
+
+    </div>
+   </div>
+</div>
+

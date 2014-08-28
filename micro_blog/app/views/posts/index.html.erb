@@ -1,0 +1,22 @@
+<!-- index.html.erb -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-6">
+
+<h1>Posts</h1>
+
+    <% @all_posts.each do |post| %>
+    <h2><%= link_to post.title, post %></h2>
+    <p>Written By <%= post.user ? post.user.first_name: "nil" %> on
+        <%= post.updated_at.to_formatted_s(:long) %>
+    </p>
+
+    <p><%= post.body %></p>
+    <p><%= link_to "#{post.comments.length} comments", post_comments_path(post) %></p>
+    <% end %>
+
+
+    </div>
+  </div>
+</div>

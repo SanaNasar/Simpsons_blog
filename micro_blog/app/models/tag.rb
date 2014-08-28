@@ -1,0 +1,15 @@
+class Tag < ActiveRecord::Base
+	# validation for verify name
+		# uniqueness
+		# presence
+		# max and min length
+		# format
+		# no spaces or special characters
+
+	validates :name, uniqueness: true, presence: true
+    
+	has_many :post_tags
+	has_many :posts, :through => :post_tags
+end
+
+

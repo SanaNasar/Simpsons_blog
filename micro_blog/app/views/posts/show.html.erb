@@ -1,0 +1,32 @@
+<!-- show.html.erb -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-6">
+
+				<h1><%= @post.title %></h1>
+				<p><%= @post.body %></p>
+
+				<p>
+					<% @post.comments.each do |comment| %>
+						Comment:<br/>
+						<%= comment.content %><br/>
+					<% end %>
+				</p>
+
+				<% if @tags.length > 0 %>
+				<p>Tags:
+					<% @tags.each do |tag| %>
+					<a href="/tags/<%=tag.id%>"><%=tag.name%></a><br/>
+				<% end %>
+				</p>
+				<% end %>
+
+		<% if @post.user.id == session[:user_id] %>
+			<%= button_to "Update", edit_post_path(@post), method: :get %><br/>
+			<%= button_to "Delete", @post, method: :delete %>
+		<% end %>
+
+		</div>
+	</div>
+</div>

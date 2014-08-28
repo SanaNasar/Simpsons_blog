@@ -1,0 +1,31 @@
+<!-- index.html.erb -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-6">
+
+    <div>
+        <h2><%= @post.title %> </h2>
+        <p>
+        <%=  @post.body %><br>
+        </p>
+        <p>Author: <%= @post.user.first_name %> <%= @post.user.last_name %></p>
+
+    </div>
+
+<div>
+<h2>Comments:</h2><br>
+<a href="/posts/<%= params[:post_id]%>/comments/new">make a comment</a>
+
+<p>
+<% if @comments.length >0 %>
+<% @comments.each do |comment| %>
+<%= comment.content %><br>
+<% end %>
+<% end %>
+</p>
+
+</div>
+</div>
+</div>
+</div>
