@@ -2,9 +2,23 @@ body {
   background: -webkit-linear-gradient(top, rgba(0, 164, 214,1), rgba(0,0,0,.1));
   width: 100%;
   height: 782px;
-
+  z-index: -10;
 }
 
+#mike {
+  position: absolute;
+  background: url("cloudBackground.png");
+  top: 53px;
+  width: 100%;
+  height: 730px;
+  color: #f58700;
+  z-index: -5;
+}
+
+.bartSpeak {
+  font-family: 'Indie Flower', cursive;
+  margin: 35px;
+}
   h3 {
     color: #2C3E50;
     font-family: 'Gloria Hallelujah', cursive;
