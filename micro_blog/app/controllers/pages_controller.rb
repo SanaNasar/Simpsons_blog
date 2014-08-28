@@ -30,8 +30,10 @@ before_action :is_authenticated?
 	end
 
 	def show
-		# user_id = params[:user_id]
 		@user = current_user
+		user_id = params[:user_id]
+		# @user = current_user
+		@user = User.find(user_id)
 		# @pages = @user.pages
 	end
 
