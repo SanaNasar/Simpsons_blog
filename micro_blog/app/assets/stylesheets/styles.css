@@ -1,11 +1,11 @@
 body {
-  background: -webkit-linear-gradient(right, rgba(42, 187, 155,1), rgba(0,0,0,.1));
+  background: url(Clouds.png);
 }
 
   h3 {
-    color: #1F3A93;
+    color: #2C3E50;
     font-family: 'Gloria Hallelujah', cursive;
-    font-size: 40px;
+    font-size: 45px;
   }
 
 
