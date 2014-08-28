@@ -2,10 +2,13 @@ body {
   background: -webkit-linear-gradient(top, rgba(0, 164, 214,1), rgba(0,0,0,.1));
   width: 100%;
   height: 782px;
+
 }
 
   h3 {
-    color: #1F3A93;
+    color: #2C3E50;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 45px;
   }
 
 
