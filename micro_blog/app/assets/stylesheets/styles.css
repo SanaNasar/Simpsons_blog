@@ -1,9 +1,10 @@
 body {
-  background: url(Clouds.png);
+	background-color: #86E2D5;
+/*  background: url(Clouds.png);*/
 }
 
   h3 {
-    color: #2C3E50;
+    color: #674172;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 45px;
   }
