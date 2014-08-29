@@ -23,8 +23,8 @@
 				<% end %>
 
 		<% if @post.user.id == session[:user_id] %>
-			<%= button_to "Update", edit_post_path(@post), method: :get %><br/>
-			<%= button_to "Delete", @post, method: :delete %>
+			<%= button_to "Update", edit_post_path(@post), method: :get, class: "btn btn-primary" %><br/>
+			<%= button_to "Delete", @post, method: :delete, class: "btn btn-primary" %>
 		<% end %>
 
 		</div>
